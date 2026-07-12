@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Message Management</title>
+  
+  <style>
+    /* System Typography & Global Resets */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Layout: Fixed Sidebar Control */
+    .sidebar {
+      width: 260px;
+      background-color: #0f172a; /* Sleek Dark Slate */
+      color: #f8fafc;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      height: 100vh;
+    }
+    .sidebar-brand {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      color: #38bdf8;
+    }
+    .sidebar-menu {
+      list-style: none;
+    }
+    .sidebar-item {
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-left: 4px solid #38bdf8;
+    }
+
+    /* Main Dashboard View Window */
+    .main-content {
+      margin-left: 260px;
+      padding: 40px;
+      width: calc(100% - 260px);
+    }
+
+    /* Confidentiality Notice Alert Bar */
+    .notice-banner {
+      background-color: #fef3c7; /* Soft amber tint */
+      border-left: 4px solid #d97706;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 32px;
+    }
+    .notice-banner h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #78350f;
+      margin-bottom: 6px;
+    }
+    .notice-banner p {
+      font-size: 0.9rem;
+      color: #92400e;
+      line-height: 1.5;
+    }
+
+    /* Content Data Wrapper Panel */
+    .table-container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+
+    /* Clean Data Table Layout */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #475569;
+      font-weight: 600;
+      padding: 16px 24px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    td {
+      padding: 18px 24px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+      vertical-align: top;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:hover td {
+      background-color: #f8fafc; /* Subtle highlighting when row is focused */
+    }
+
+    /* Structured formatting for row content */
+    .email-link {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+    .message-text {
+      max-width: 400px;
+      line-height: 1.5;
+      color: #475569;
+    }
+
+    /* Action Trigger Buttons Container */
+    .action-group {
+      display: flex;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    /* Edit Action Element Styles */
+    .btn-warning {
+      background-color: #fef3c7;
+      color: #d97706;
+      border: 1px solid #fde68a;
+    }
+    .btn-warning:hover {
+      background-color: #fde68a;
+      color: #b45309;
+    }
+    /* Delete Action Element Styles */
+    .btn-outline-success {
+      background-color: #fee2e2;
+      color: #dc2626; /* Adjusted to red for better dashboard semantic logic */
+      border: 1px solid #fecaca;
+    }
+    .btn-outline-success:hover {
+      background-color: #fecaca;
+      color: #991b1b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Navigation Drawer -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">KBHS Admin</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">Inquiries Inbox</li>
+    </ul>
+  </aside>
+
+  <!-- Main Work Environment Section -->
+  <main class="main-content">
+    
+    <!-- Privacy Shield Alert Unit -->
+    <div class="notice-banner">
+      <h2>Message Management Dashboard</h2>
+      <p>This private dashboard is reserved for authorized staff to review and manage inquiries submitted through the website. The information displayed here is confidential and should be handled in accordance with the school’s privacy and data protection policies.</p>
+    </div>
+
+    <!-- Centralized Streamlined Data Matrix Panel -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email Address</th>
+            <th>Message</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for contact in all %}
+          <tr>
+            <td class="fw-medium"><strong>{{ contact.name }}</strong></td>
+            <td class="email-link">{{ contact.email }}</td>
+            <td><div class="message-text">{{ contact.message }}</div></td>
+            <td>
+              <div class="action-group">
+                <a href="/edit/{{ contact.id }}" class="btn btn-warning">Edits</a>
+                <a href="/delete/{{ contact.id }}" class="btn btn-outline-success">Delete</a>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+</body>
+</html>
