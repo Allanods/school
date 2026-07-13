@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Facilities - International School</title>
+  
+  <style>
+    /* Reset & Typography */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fafafa;
+      color: #334155;
+      line-height: 1.6;
+      padding: 80px 20px;
+    }
+
+    /* Container layout */
+    .facilities-section {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Section Header */
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px auto;
+    }
+    .subtitle-badge {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #b45309; /* Warm Amber Accent */
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: #1e3a8a; /* Deep Navy Blue */
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    .section-desc {
+      font-size: 1.1rem;
+      color: #64748b;
+    }
+
+    /* Grid Layout */
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    /* Premium Facility Cards */
+    .facility-card {
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+      border: 1px solid #f1f5f9;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .facility-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px rgba(30, 58, 138, 0.1);
+      border-color: #e2e8f0;
+    }
+
+    /* Visual Feature Content block */
+    .card-content {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    /* Pure CSS Decorative Icons */
+    .icon-container {
+      width: 60px;
+      height: 60px;
+      background: #eff6ff; /* Light blue tint */
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    /* Minimal geometric shapes acting as standalone icons */
+    .icon-shape {
+      width: 20px;
+      height: 20px;
+      border: 3px solid #1e3a8a;
+      border-radius: 4px;
+      position: relative;
+    }
+    .icon-shape::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #b45309;
+      right: -4px;
+      bottom: -4px;
+      border-radius: 2px;
+    }
+
+    /* Typography inside cards */
+    .facility-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 14px;
+    }
+    .facility-text {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    /* Feature tags inside cards */
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .spec-tag {
+      font-size: 0.75rem;
+      background-color: #f8fafc;
+      color: #475569;
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-weight: 600;
+      border: 1px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+
+<section class="facilities-section">
+  
+  <!-- Header Block -->
+  <div class="section-header">
+    <span class="subtitle-badge">Our Campus</span>
+    <h2 class="section-title">Comfortable Facilities</h2>
+    <p class="section-desc">
+      Our purpose-built campus provides an inspiring architectural environment engineered to push the boundaries of student learning, creativity, and holistic well-being.
+    </p>
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="facilities-grid">
+    
+    <!-- Facility 1: Knowledge Hub -->
+    <div class="facility-card">
+      <div class="card-content">
+        <div class="icon-container">
+          <div class="icon-shape"></div>
+        </div>
+        <h3 class="facility-title">Discovery Library &amp; Media Hub</h3>
+        <p class="facility-text">
+          More than just bookshelves—our multi-level media center combines vast global print collections with digital research bars, collaborative learning pods, and quiet reading zones designed to inspire independent critical thought.
+        </p>
+        <div class="tag-list">
+          <span class="spec-tag">50,000+ Resources</span>
+          <span class="spec-tag">Digital Subscriptions</span>
+          <span class="spec-tag">Collaboration Zones</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Facility 2: STEM Labs -->
+    <div class="facility-card">
+      <div class="card-content">
+        <div class="icon-container">
+          <div class="icon-shape"></div>
+        </div>
+        <h3 class="facility-title">Next-Gen Science &amp; STEM Labs</h3>
+        <p class="facility-text">
+          Equipped to university standards, our specialized Biology, Chemistry, Physics, and Robotics labs allow students to conduct advanced experiential research, computational analysis, and practical experiments safely.
+        </p>
+        <div class="tag-list">
+          <span class="spec-tag">University-Grade Equipment</span>
+          <span class="spec-tag">3D Printing &amp; CAD</span>
+          <span class="spec-tag">Strict Safety Systems</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Facility 3: Premium Boarding -->
+    <div class="facility-card">
+      <div class="card-content">
+        <div class="icon-container">
+          <div class="icon-shape"></div>
+        </div>
+        <h3 class="facility-title">Premium Boarding Residences</h3>
+        <p class="facility-text">
+          A true home away from home. Our modern, secure boarding houses offer comfortable multi-share and single rooms, lively student lounges, full-time pastoral care, and dedicated evening academic support networks.
+        </p>
+        <div class="tag-list">
+          <span class="spec-tag">24/7 Medical Care</span>
+          <span class="spec-tag">Full-Time House Parents</span>
+          <span class="spec-tag">Recreational Lounges</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
