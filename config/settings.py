@@ -77,27 +77,15 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/6.0/ref/settings/#databases
-import dj_database_url
-
-DATABASES = {
-    'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3', # Fallback to local SQLite when coding locally
-        conn_max_age=600
-    )
-}
+#import os
 import dj_database_url
 
 DATABASES = {
     "default": dj_database_url.config(
-        default=os.environ.get("DATABASE_URL")
+        default="sqlite:///db.sqlite3",
+        conn_max_age=600
     )
 }
-
-# Password validation
-# https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
