@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kigumo Bendera High School</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <style>
+        /* Smooth transitions for interactive elements */
+        .btn-hover-effect {
+            transition: all 0.3s ease;
+        }
+        .btn-hover-effect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+        }
+        .img-hover-effect {
+            transition: transform 0.5s ease;
+        }
+        .img-hover-effect:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body class="bg-light text-dark">
+
+    <nav style="background:linear-gradient(90deg,#0d6efd,#0a58ca);padding:14px 0;box-shadow:0 2px 10px rgba(0,0,0,0.15);">
+    <div style="max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px;flex-wrap:wrap;">
+        <a href="/" style="color:#fff;text-decoration:none;font-size:1.5rem;font-weight:bold;">
+            Kigumo Bendera HS
+        </a>
+
+        <ul style="list-style:none;display:flex;gap:20px;margin:0;padding:0;flex-wrap:wrap;">
+            <li><a href="/" style="color:#fff;text-decoration:none;font-weight:600;">Home</a></li>
+            <li><a href="/about/" style="color:#fff;text-decoration:none;font-weight:600;">About</a></li>
+            <li><a href="/academics/" style="color:#fff;text-decoration:none;font-weight:600;">Academics</a></li>
+            <li><a href="/admission/" style="color:#fff;text-decoration:none;font-weight:600;">Admission</a></li>
+            <li><a href="/facilities/" style="color:#fff;text-decoration:none;font-weight:600;">Facilities</a></li>
+            <li><a href="/studentgilife/" style="color:#fff;text-decoration:none;font-weight:600;">Studentlife</a></li>
+            <li><a href="/contact/" style="color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;background:#ffc107;color:#000;border-radius:20px;">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container my-5 py-4">
+
+    <!-- Hero Header Section -->
+    <header class="text-center mb-5 max-width-700 mx-auto">
+        <h1 class="display-4 fw-bold text-primary mb-3">
+            Welcome to Kigumo Bendera High School
+        </h1>
+        <p class="lead text-muted mx-auto" style="max-width: 750px;">
+            Since 1965, nurturing academic excellence, integrity, and future leaders through quality education.
+        </p>
+    </header>
+
+    <!-- Main Content Row -->
+    <div class="row g-5 align-items-center">
+
+        <!-- Text Column -->
+        <div class="col-lg-6 order-2 order-lg-1">
+            <div class="pe-lg-4">
+                <h2 class="h3 text-primary mb-4 position-relative pb-2">
+                    Our School
+                    <span class="position-absolute bottom-0 start-0 bg-primary" style="width: 50px; height: 3px;"></span>
+                </h2>
+
+                <p class="fs-5 text-secondary lh-base mb-4 text-start">
+                    Welcome to <strong>Kigumo Bendera High School</strong>. Since our establishment in 1965,
+                    we have remained committed to providing quality education in a disciplined and
+                    supportive learning environment. We believe that education goes beyond academic
+                    achievement by nurturing integrity, leadership, innovation, and responsibility.
+                </p>
+
+                <p class="fs-5 text-secondary lh-base mb-4 text-start">
+                    Through the dedication of our teachers, support from parents, and determination of
+                    our students, we continue to build a culture of excellence that prepares young
+                    people to become confident, responsible, and successful members of society.
+                </p>
+
+                <!-- Button replaced with an Anchor Link tag -->
+                <a href='about' class="btn-hover-effect" style="color: red; font-weight: bolder;"> learn more </a> <br>
+                </a>
+            </div>
+        </div>
+
+        <!-- Image Column -->
+        <div class="col-lg-6 order-1 order-lg-2 text-center mb-4 mb-lg-0">
+            <div class="overflow-hidden rounded-4 shadow-lg img-hover-effect">
+                <img src="{% static 'images/kb1.webp' %}"
+                     alt="Kigumo Bendera High School campus view"
+                     class="img-fluid w-100 d-block"
+                     style="max-height: 450px; object-fit: cover;">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!--end of index.html-->
+
+
+<!--about.html-->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Kigumo Bendera High School</title>
+</head>
+
+<body>
+
+<div style="width:90%; margin:auto; margin-top:60px;">
+
+    <h1 style="text-align:center; color:#0d6efd; font-size:45px;">
+        About Kigumo Bendera High School
+    </h1>
+
+    <p style="text-align:center; color:gray; font-size:18px; margin-bottom:60px;">
+        A Legacy of Excellence Since 1965
+    </p>
+
+    <div style="display:flex; align-items:center; gap:60px;">
+
+        <!-- Left Side -->
+        <div style="width:50%;">
+
+            <h2 style="color:#0d6efd;">
+                Empowering Generations Through Quality Education
+            </h2>
+
+            <p style="font-size:18px; line-height:1.8; color:#555; text-align:justify;">
+
+                Established in <strong>1965</strong>, Kigumo Bendera High School has
+                proudly served generations of learners by providing quality education
+                founded on academic excellence, discipline, integrity, and leadership.
+                The school remains committed to creating an environment where every
+                student is inspired to achieve their full potential.
+
+            </p>
+
+            <p style="font-size:18px; line-height:1.8; color:#555; text-align:justify;">
+
+                Through dedicated teachers, a supportive learning environment, and
+                diverse co-curricular programmes, the school continues to nurture
+                responsible citizens equipped with the knowledge, skills, and values
+                needed to thrive in higher education and contribute positively to society.
+
+            </p>
+
+            
+
+        </div>
+
+        <!-- Right Side -->
+        <div style="width:50%; text-align:center;">
+
+            <img src="{% static 'images/kb2.webp' %}"
+                 alt="Kigumo Bendera High School"
+
+                 style="
+                 width:100%;
+                 max-width:550px;
+                 border-radius:15px;
+                 box-shadow:0 12px 30px rgba(0,0,0,0.25);">
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+<!--end of about.html-->
+
+<!--start of academics.html-->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics | Kigumo Bendera High School</title>
+</head>
+
+<body style="font-family:Arial, Helvetica, sans-serif; background:#f8f9fa; margin:0;">
+
+<!-- Heading -->
+
+<div style="text-align:center; padding:50px;">
+
+    <h1 style="color:#0d6efd; font-size:45px;">
+        Academic Excellence
+    </h1>
+
+    <p style="font-size:20px; color:gray;">
+        Providing quality education since 1965.
+    </p>
+
+</div>
+
+<!-- Introduction -->
+
+<div style="
+display:flex;
+align-items:center;
+justify-content:space-between;
+width:90%;
+margin:auto;
+gap:70px;
+margin-bottom:80px;
+">
+
+    <!-- Text -->
+
+    <div style="width:50%;">
+
+        <h2 style="color:#0d6efd;">
+            A Tradition of Academic Excellence
+        </h2>
+
+        <p style="
+        font-size:18px;
+        line-height:1.8;
+        color:#555;
+        text-align:justify;
+        ">
+
+            Kigumo Bendera High School is committed to providing
+            high-quality education that prepares students for
+            success in higher education and beyond. Our dedicated
+            teachers create an engaging learning environment that
+            promotes critical thinking, creativity, discipline,
+            and academic excellence.
+
+        </p>
+
+        <p style="
+        font-size:18px;
+        line-height:1.8;
+        color:#555;
+        text-align:justify;
+        ">
+
+            Through a balanced curriculum, continuous assessment,
+            and learner-centered teaching, we equip our students
+            with the knowledge, confidence, and skills required
+            to thrive in today's competitive world.
+
+        </p>
+
+    </div>
+
+    <!-- Image -->
+
+    <div style="
+    width:50%;
+    text-align:center;
+    ">
+
+        <img src="{% static 'images/kb3.webp' %}"
+
+        alt="Academics"
+
+        style="
+        width:100%;
+        max-width:500px;
+        height:420px;
+        object-fit:cover;
+        border-radius:20px;
+        box-shadow:0 15px 35px rgba(0,0,0,.25);
+        ">
+
+    </div>
+
+</div>
+
+<!-- Academic Departments -->
+
+<div style="
+width:90%;
+margin:auto;
+margin-bottom:80px;
+">
+
+<h2 style="
+text-align:center;
+color:#0d6efd;
+margin-bottom:40px;
+">
+Academic Departments
+</h2>
+
+<div style="
+display:flex;
+justify-content:space-between;
+gap:25px;
+">
+
+<div style="
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+width:23%;
+">
+
+<h3>Mathematics</h3>
+
+<p>
+Developing analytical and problem-solving skills through quality instruction.
+</p>
+
+</div>
+
+<div style="
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+width:23%;
+">
+
+<h3>Sciences</h3>
+
+<p>
+Providing practical and theoretical knowledge in Biology, Chemistry, and Physics.
+</p>
+
+</div>
+
+<div style="
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+width:23%;
+">
+
+<h3>Languages</h3>
+
+<p>
+Enhancing communication skills through English, Kiswahili, and Literature.
+</p>
+
+</div>
+
+<div style="
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+width:23%;
+">
+
+<h3>Humanities</h3>
+
+<p>
+Building knowledge in History, Geography, CRE, and Business Studies.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Call to Action -->
+
+<div style="
+background:#0d6efd;
+color:white;
+text-align:center;
+padding:60px;
+">
+
+<h2>Empowering Learners for a Successful Future</h2>
+
+<p style="
+font-size:18px;
+width:70%;
+margin:auto;
+line-height:1.8;
+">
+
+Our academic programmes are designed to inspire excellence,
+innovation, and lifelong learning while preparing students to
+be responsible citizens and future leaders.
+
+</p>
+
+</div>
+
+</body>
+</html>
+<!--end of academics-->
+
+<!--start of facilities-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Facilities - International School</title>
+  
+  <style>
+    /* Reset & Typography */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fafafa;
+      color: #334155;
+      line-height: 1.6;
+      padding: 80px 20px;
+    }
+
+    /* Container layout */
+    .facilities-section {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Section Header */
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px auto;
+    }
+    .subtitle-badge {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #b45309; /* Warm Amber Accent */
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: #1e3a8a; /* Deep Navy Blue */
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    .section-desc {
+      font-size: 1.1rem;
+      color: #64748b;
+    }
+
+    /* Grid Layout */
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    /* Premium Facility Cards */
+    .facility-card {
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+      border: 1px solid #f1f5f9;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .facility-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px rgba(30, 58, 138, 0.1);
+      border-color: #e2e8f0;
+    }
+
+    /* Visual Feature Content block */
+    .card-content {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    /* Pure CSS Decorative Icons */
+    .icon-container {
+      width: 60px;
+      height: 60px;
+      background: #eff6ff; /* Light blue tint */
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    /* Minimal geometric shapes acting as standalone icons */
+    .icon-shape {
+      width: 20px;
+      height: 20px;
+      border: 3px solid #1e3a8a;
+      border-radius: 4px;
+      position: relative;
+    }
+    .icon-shape::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #b45309;
+      right: -4px;
+      bottom: -4px;
+      border-radius: 2px;
+    }
+
+    /* Typography inside cards */
+    .facility-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 14px;
+    }
+    .facility-text {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    /* Feature tags inside cards */
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .spec-tag {
+      font-size: 0.75rem;
+      background-color: #f8fafc;
+      color: #475569;
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-weight: 600;
+      border: 1px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+
+<section class="facilities-section">
+  
+  <!-- Header Block -->
+  <div class="section-header">
+    <span class="subtitle-badge">Our Campus</span>
+    <h2 class="section-title">Comfortable Facilities</h2>
+    <p class="section-desc">
+      Our purpose-built campus provides an inspiring architectural environment engineered to push the boundaries of student learning, creativity, and holistic well-being.
+    </p>
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="facilities-grid">
+    
+    <!-- Facility 1: Knowledge Hub -->
+    <div class="facility-card">
+      <div class="card-content">
+        <div class="icon-container">
+          <div class="icon-shape"></div>
+        </div>
+        <h3 class="facility-title">Discovery Library &amp; Media Hub</h3>
+        <p class="facility-text">
+          More than just bookshelves—our multi-level media center combines vast global print collections with digital research bars, collaborative learning pods, and quiet reading zones designed to inspire independent critical thought.
+        </p>
+        <div class="tag-list">
+          <span class="spec-tag">50,000+ Resources</span>
+          <span class="spec-tag">Digital Subscriptions</span>
+          <span class="spec-tag">Collaboration Zones</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Facility 2: STEM Labs -->
+    <div class="facility-card">
+      <div class="card-content">
+        <div class="icon-container">
+          <div class="icon-shape"></div>
+        </div>
+        <h3 class="facility-title">Next-Gen Science &amp; STEM Labs</h3>
+        <p class="facility-text">
+          Equipped to university standards, our specialized Biology, Chemistry, Physics, and Robotics labs allow students to conduct advanced experiential research, computational analysis, and practical experiments safely.
+        </p>
+        <div class="tag-list">
+          <span class="spec-tag">University-Grade Equipment</span>
+          <span class="spec-tag">3D Printing &amp; CAD</span>
+          <span class="spec-tag">Strict Safety Systems</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Facility 3: Premium Boarding -->
+    <div class="facility-card">
+      <div class="card-content">
+        <div class="icon-container">
+          <div class="icon-shape"></div>
+        </div>
+        <h3 class="facility-title">Premium Boarding Residences</h3>
+        <p class="facility-text">
+          A true home away from home. Our modern, secure boarding houses offer comfortable multi-share and single rooms, lively student lounges, full-time pastoral care, and dedicated evening academic support networks.
+        </p>
+        <div class="tag-list">
+          <span class="spec-tag">24/7 Medical Care</span>
+          <span class="spec-tag">Full-Time House Parents</span>
+          <span class="spec-tag">Recreational Lounges</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
+<!--end of facilities-->
+
+<!--start of studentlife-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Facilities - International School</title>
+  
+  <style>
+    /* Reset & Typography */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fafafa;
+      color: #334155;
+      line-height: 1.6;
+      padding: 80px 20px;
+    }
+
+    /* Container layout */
+    .facilities-section {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Section Header */
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px auto;
+    }
+    .subtitle-badge {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #b45309; /* Warm Amber Accent */
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: #1e3a8a; /* Deep Navy Blue */
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    .section-desc {
+      font-size: 1.1rem;
+      color: #64748b;
+    }
+
+    /* Grid Layout */
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    /* Premium Facility Cards */
+    .facility-card {
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+      border: 1px solid #f1f5f9;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .facility-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px rgba(30, 58, 138, 0.1);
+      border-color: #e2e8f0;
+    }
+
+    /* Visual Feature Content block */
+    .card-content {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    /* Pure CSS Decorative Icons */
+    .icon-container {
+      width: 60px;
+      height: 60px;
+      background: #eff6ff; /* Light blue tint */
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    /* Minimal geometric shapes acting as standalone icons */
+    .icon-shape {
+      width: 20px;
+      height: 20px;
+      border: 3px solid #1e3a8a;
+      border-radius: 4px;
+      position: relative;
+    }
+    .icon-shape::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #b45309;
+      right: -4px;
+      bottom: -4px;
+      border-radius: 2px;
+    }
+
+    /* Typography inside cards */
+    .facility-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 14px;
+    }
+    .facility-text {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    /* Feature tags inside cards */
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .spec-tag {
+      font-size: 0.75rem;
+      background-color: #f8fafc;
+      color: #475569;
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-weight: 600;
+      border: 1px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+
+<section class="facilities-section">
+  
+  <!-- Header Block -->
+  <div class="section-header">
+    <span class="subtitle-badge">Our Campus</span>
+    <h2 class="section-title">Comfortable Facilities</h2>
+    <p class="section-desc">
+      Our purpose-built campus provides an inspiring architectural environment engineered to push the boundaries of student learning, creativity, and holistic well-being.
+    </p>
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="facilities-grid">
+    
+    <!-- Facility 1: Knowledge Hub -->
+    <div class="facility-card">
+      <div class="card-content">
+        <div class="icon-container">
+          <div class="icon-shape"></div>
+        </div>
+        <h3 class="facility-title">Discovery Library &amp; Media Hub</h3>
+        <p class="facility-text">
+          More than just bookshelves—our multi-level media center combines vast global print collections with digital research bars, collaborative learning pods, and quiet reading zones designed to inspire independent critical thought.
+        </p>
+        <div class="tag-list">
+          <span class="spec-tag">50,000+ Resources</span>
+          <span class="spec-tag">Digital Subscriptions</span>
+          <span class="spec-tag">Collaboration Zones</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Facility 2: STEM Labs -->
+    <div class="facility-card">
+      <div class="card-content">
+        <div class="icon-container">
+          <div class="icon-shape"></div>
+        </div>
+        <h3 class="facility-title">Next-Gen Science &amp; STEM Labs</h3>
+        <p class="facility-text">
+          Equipped to university standards, our specialized Biology, Chemistry, Physics, and Robotics labs allow students to conduct advanced experiential research, computational analysis, and practical experiments safely.
+        </p>
+        <div class="tag-list">
+          <span class="spec-tag">University-Grade Equipment</span>
+          <span class="spec-tag">3D Printing &amp; CAD</span>
+          <span class="spec-tag">Strict Safety Systems</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Facility 3: Premium Boarding -->
+    <div class="facility-card">
+      <div class="card-content">
+        <div class="icon-container">
+          <div class="icon-shape"></div>
+        </div>
+        <h3 class="facility-title">Premium Boarding Residences</h3>
+        <p class="facility-text">
+          A true home away from home. Our modern, secure boarding houses offer comfortable multi-share and single rooms, lively student lounges, full-time pastoral care, and dedicated evening academic support networks.
+        </p>
+        <div class="tag-list">
+          <span class="spec-tag">24/7 Medical Care</span>
+          <span class="spec-tag">Full-Time House Parents</span>
+          <span class="spec-tag">Recreational Lounges</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html> <br><br>
+
+  
+<!--end of schoollife-->
+
+<!--start of admission-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions | Kigumo Bendera High School</title>
+    {% load static %}
+
+
+   <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+
+</head>
+
+<body style="font-family:Arial, Helvetica, sans-serif; margin:0; background:#f8f9fa;">
+
+<!-- Hero Section -->
+
+<div style="background:#0d6efd; color:white; text-align:center; padding:70px;">
+
+    <h1 style="font-size:50px;">Admissions</h1>
+
+    <p style="font-size:20px;">
+        Begin your journey towards excellence at Kigumo Bendera High School.
+    </p>
+
+</div>
+
+<!-- Introduction -->
+
+<div style="width:90%; margin:60px auto; display:flex; gap:60px; align-items:center;">
+
+    <div style="width:50%;">
+
+        <h2 style="color:#0d6efd;">Welcome to Our Admissions Office</h2>
+
+        <p style="font-size:18px; line-height:1.8; text-align:justify; color:#555;">
+
+            We warmly welcome students who are ready to join a community dedicated
+            to academic excellence, discipline, leadership and holistic development.
+            Our admission process is simple, transparent and designed to help every
+            learner settle comfortably into school life.
+
+        </p>
+
+        <a href="" style="
+        background:#0d6efd;
+        color:white;
+        padding:12px 30px;
+        text-decoration:none;
+        border-radius:5px;
+        display:inline-block;
+        margin-top:20px;">
+        Contact Us
+        </a>
+
+    </div>
+
+    <div style="width:50%; text-align:center;">
+
+        <img src="{% static 'images/kb4.webp' %}"
+
+        style="
+        width:100%;
+        max-width:500px;
+        height:400px;
+        object-fit:cover;
+        border-radius:15px;
+        box-shadow:0 10px 30px rgba(0,0,0,.2);">
+
+    </div>
+
+</div>
+
+<!-- Admission Requirements -->
+
+<div style="width:90%; margin:auto;">
+
+<h2 style="text-align:center; color:#0d6efd;">Admission Requirements</h2>
+
+<div style="display:flex; gap:20px; justify-content:space-between; margin-top:40px;">
+
+<div style="background:white; width:23%; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,.1);">
+<h4>Application Form</h4>
+<p>Complete the school admission application form.</p>
+</div>
+
+<div style="background:white; width:23%; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,.1);">
+<h4>Academic Records</h4>
+<p>Provide previous school reports and examination results.</p>
+</div>
+
+<div style="background:white; width:23%; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,.1);">
+<h4>Birth Certificate</h4>
+<p>Submit a copy of the learner's birth certificate.</p>
+</div>
+
+<div style="background:white; width:23%; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,.1);">
+<h4>Passport Photos</h4>
+<p>Recent passport-size photographs.</p>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- Why Join Us -->
+
+<div style="background:white; padding:60px;">
+
+<h2 style="text-align:center; color:#0d6efd;">Why Join Kigumo Bendera High School?</h2>
+
+<div style="display:flex; gap:20px; justify-content:space-between; margin-top:40px;">
+
+<div style="width:30%; text-align:center;">
+<h3>Academic Excellence</h3>
+<p>Consistent commitment to quality education and learner success.</p>
+</div>
+
+<div style="width:30%; text-align:center;">
+<h3>Qualified Teachers</h3>
+<p>Experienced educators dedicated to inspiring every learner.</p>
+</div>
+
+<div style="width:30%; text-align:center;">
+<h3>Holistic Development</h3>
+<p>Sports, clubs, leadership and talent development programmes.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- Fees -->
+
+<div style="width:90%; margin:70px auto;">
+
+<h2 style="color:#0d6efd;">School Fees</h2>
+
+<p style="font-size:18px; color:#555; line-height:1.8;">
+
+For the latest fee structure and payment guidelines,
+kindly contact the school administration.
+
+</p>
+
+</div>
+
+<!-- CTA -->
+
+<div style="background:#0d6efd; color:white; text-align:center; padding:60px;">
+
+<h2>Ready to Join Kigumo Bendera High School?</h2>
+
+<p style="font-size:18px;">
+Take the first step towards a brighter future by contacting our admissions office today.
+</p>
+
+
+</div>
+
+</body>
+</html>
+<br><br>
+
+<!--end of admission-->
+
+<!--start of contact-->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #fff;
+            min-height: 100vh;
+        }
+
+        .contact-card {
+            border: none;
+            border-radius: 20px;
+        }
+
+        .contact-header {
+            background-color: #f8f9fa;
+            color: #212529;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        textarea.form-control {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="contact-header shadow-sm mb-4">
+        <h1 class="display-4 fw-bold">Let’s Connect!</h1>
+        <p class="lead mb-0">
+            Have a question or suggestion? We’d love to hear from you.
+        </p>
+    </div>
+
+    <div class="card contact-card shadow-lg mx-auto" style="max-width: 650px;">
+        <div class="card-body p-5">
+            <div class="text-center mb-4">
+                <p class="mb-1"><strong>📞 Call Us:</strong> +254 712 345 678</p>
+                <p><strong>✉️ Email:</strong> hello@examplemail.com</p>
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label for="name" class="form-label fw-semibold">Your Name</label>
+                    <input type="text" value="{{editappointment.name}}" class="form-control" id="name" name="name"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold">Your Email</label>
+                    <input type="email" value="{{editappointment.email}}" class="form-control" id="email" name="email"
+                           placeholder="you@gmail.com" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label fw-semibold">Your Message</label>
+                    <textarea class="form-control" id="message" name="message"
+                              rows="5" placeholder="any suggestion..." required>{{editappointment.message}} </textarea>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<!--end of contact-->
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Life - Kigumo Bendera High School</title>
+  
+  <style>
+    /* System Typography & Base Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      line-height: 1.6;
+      padding: 80px 20px;
+    }
+
+    /* Container Layout */
+    .student-life-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header Section */
+    .header-section {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 60px auto;
+    }
+    .badge {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #0284c7;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .main-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+    .lead-text {
+      font-size: 1.1rem;
+      color: #64748b;
+    }
+
+    /* Feature Grid Layout */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    /* Custom Cards */
+    .feature-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 25px -5px rgba(2, 132, 199, 0.1), 0 10px 10px -5px rgba(2, 132, 199, 0.04);
+    }
+
+    /* Card Icon Box (Pure CSS Shapes) */
+    .icon-wrapper {
+      width: 52px;
+      height: 52px;
+      background-color: #f0f9ff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .icon-dot {
+      width: 14px;
+      height: 14px;
+      background-color: #0284c7;
+      border-radius: 50%;
+      box-shadow: 0 0 0 6px rgba(2, 132, 199, 0.2);
+    }
+
+    /* Card Typography */
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 12px;
+    }
+    .card-text {
+      font-size: 0.95rem;
+      color: #64748b;
+      flex-grow: 1;
+    }
+
+    /* Testimonial Section */
+    .testimonial-wrapper {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .testimonial-card {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-left: 5px solid #0284c7;
+      border-radius: 0 16px 16px 0;
+      padding: 30px;
+      position: relative;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    }
+    .quote-text {
+      font-size: 1.15rem;
+      font-style: italic;
+      color: #334155;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .quote-author {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #0284c7;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="student-life-container">
+  
+  <!-- Header Section -->
+  <div class="header-section">
+    <span class="badge">Experience KBHS</span>
+    <h1 class="main-title">Student Life</h1>
+    <p class="lead-text">
+      At Kigumo Bendera High School, education goes beyond academic excellence. We provide a vibrant and caring community where students discover their passions, build meaningful friendships, and develop the skills needed to become responsible and confident leaders of tomorrow.
+    </p>
+  </div>
+
+  <!-- Feature Cards Grid -->
+  <div class="feature-grid">
+    
+    <!-- Card 1 -->
+    <div class="feature-card">
+      <div class="icon-wrapper">
+        <div class="icon-dot"></div>
+      </div>
+      <h3 class="card-title">Clubs &amp; Societies</h3>
+      <p class="card-text">Our Debate, Science, Music, Drama, and ICT clubs provide students with opportunities to explore their interests beyond the classroom. Through competitions, projects, and performances, learners cultivate creativity, teamwork, communication skills, and self-confidence.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="feature-card">
+      <div class="icon-wrapper">
+        <div class="icon-dot"></div>
+      </div>
+      <h3 class="card-title">Sports &amp; Athletics</h3>
+      <p class="card-text">Students participate in a variety of sporting activities, including football, volleyball, basketball, and athletics. These programs encourage physical fitness, discipline, resilience, and the spirit of fair play while creating lasting friendships.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="feature-card">
+      <div class="icon-wrapper">
+        <div class="icon-dot"></div>
+      </div>
+      <h3 class="card-title">Leadership Opportunities</h3>
+      <p class="card-text">Through the student council and prefect system, learners gain firsthand experience in leadership and service. They develop decision-making abilities, integrity, and a strong sense of responsibility toward their peers and the school community.</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="feature-card">
+      <div class="icon-wrapper">
+        <div class="icon-dot"></div>
+      </div>
+      <h3 class="card-title">Community Service</h3>
+      <p class="card-text">Our outreach initiatives inspire students to give back to society. Activities such as environmental conservation projects and community visits nurture empathy, compassion, and a lifelong commitment to service.</p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="feature-card">
+      <div class="icon-wrapper">
+        <div class="icon-dot"></div>
+      </div>
+      <h3 class="card-title">Educational Trips</h3>
+      <p class="card-text">Field trips to universities, museums, industries, and historical sites complement classroom learning by exposing students to new ideas and real-world experiences that broaden their horizons.</p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="feature-card">
+      <div class="icon-wrapper">
+        <div class="icon-dot"></div>
+      </div>
+      <h3 class="card-title">Cultural Events &amp; Celebrations</h3>
+      <p class="card-text">Through assemblies, cultural days, talent shows, and school celebrations, students proudly share their talents and traditions, fostering unity, mutual respect, and a strong sense of belonging.</p>
+    </div>
+
+  </div>
+
+  <!-- Testimonial Section -->
+  <div class="testimonial-wrapper">
+    <div class="testimonial-card">
+      <p class="quote-text">“The clubs and leadership opportunities have helped me grow into a confident and responsible young leader.”</p>
+      <div class="quote-author">— A Form 4 Student</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

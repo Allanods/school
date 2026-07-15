@@ -27,10 +27,14 @@ DEBUG = True
 
 import os
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
 ]
+=======
+ALLOWED_HOSTS = ['*']
+>>>>>>> c9a88e50c8afd0064c0a57e52a674e2afbc5c0fa
 
 
 # Application definition
@@ -87,6 +91,7 @@ DATABASES = {
         conn_max_age=600
     )
 }
+<<<<<<< HEAD
 import dj_database_url
 
 DATABASES = {
@@ -94,6 +99,9 @@ DATABASES = {
         default=os.environ.get("DATABASE_URL")
     )
 }
+=======
+
+>>>>>>> c9a88e50c8afd0064c0a57e52a674e2afbc5c0fa
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
@@ -133,7 +141,17 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS= [
     BASE_DIR, 'static']
 
+<<<<<<< HEAD
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+=======
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# For media files (Optional)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+>>>>>>> c9a88e50c8afd0064c0a57e52a674e2afbc5c0fa
