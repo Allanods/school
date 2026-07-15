@@ -23,13 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u9l0l9vy@z!=f77vd)_1!p5ex!d_7wpo$#jv8#-0cd^i@f@^hv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 import os
 
 ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
+    'localhost',
+    '127.0.0.1',
+    'kigumobenderaweb.onrender.com',
 ]
 
 
