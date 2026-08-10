@@ -6,19 +6,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academics | Kigumo Bendera High School</title>
+    <style>
+        .back-btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 22px;
+            background: #0d6efd;
+            color: #fff;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: inherit;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: #0a58ca;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+        }
+        .back-btn:focus-visible {
+            outline: 3px solid rgba(13, 110, 253, 0.5);
+            outline-offset: 2px;
+        }
+        @media (max-width: 600px) {
+            .back-btn {
+                margin: 12px;
+                padding: 8px 18px;
+                font-size: 0.9rem;
+            }
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .acad-head {
+                padding: 35px 16px !important;
+            }
+            .acad-title {
+                font-size: 30px !important;
+            }
+            .acad-sub {
+                font-size: 17px !important;
+            }
+            .acad-intro {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 35px !important;
+                margin-bottom: 50px !important;
+            }
+            .acad-col {
+                width: 100% !important;
+            }
+            .acad-intro-text p {
+                font-size: 16px !important;
+                text-align: left !important;
+            }
+            .acad-img {
+                height: auto !important;
+            }
+            .dept-flex {
+                flex-wrap: wrap;
+                justify-content: center !important;
+                gap: 20px !important;
+            }
+            .dept-card {
+                width: 100% !important;
+            }
+            .cta-text {
+                width: 100% !important;
+            }
+        }
+    </style>
 </head>
 
 <body style="font-family:Arial, Helvetica, sans-serif; background:#f8f9fa; margin:0;">
 
+<!-- Back -->
+<a href="/" class="back-btn" onclick="if (window.history.length > 1) { window.history.back(); return false; }">
+&#8592; Back
+</a>
+
 <!-- Heading -->
 
-<div style="text-align:center; padding:50px;">
+<div class="acad-head" style="text-align:center; padding:50px;">
 
-    <h1 style="color:#0d6efd; font-size:45px;">
+    <h1 class="acad-title" style="color:#0d6efd; font-size:45px;">
         Academic Excellence
     </h1>
 
-    <p style="font-size:20px; color:gray;">
+    <p class="acad-sub" style="font-size:20px; color:gray;">
         Providing quality education since 1965.
     </p>
 
@@ -26,7 +101,7 @@
 
 <!-- Introduction -->
 
-<div style="
+<div class="acad-intro" style="
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -38,7 +113,7 @@ margin-bottom:80px;
 
     <!-- Text -->
 
-    <div style="width:50%;">
+    <div class="acad-col acad-intro-text" style="width:50%;">
 
         <h2 style="color:#0d6efd;">
             A Tradition of Academic Excellence
@@ -78,12 +153,12 @@ margin-bottom:80px;
 
     <!-- Image -->
 
-    <div style="
+    <div class="acad-col" style="
     width:50%;
     text-align:center;
     ">
 
-        <img src="{% static 'images/kb3.webp' %}"
+        <img class="acad-img" src="{% static 'images/kb3.webp' %}"
 
         alt="Academics"
 
@@ -116,13 +191,13 @@ margin-bottom:40px;
 Academic Departments
 </h2>
 
-<div style="
+<div class="dept-flex" style="
 display:flex;
 justify-content:space-between;
 gap:25px;
 ">
 
-<div style="
+<div class="dept-card" style="
 background:white;
 padding:25px;
 border-radius:10px;
@@ -138,7 +213,7 @@ Developing analytical and problem-solving skills through quality instruction.
 
 </div>
 
-<div style="
+<div class="dept-card" style="
 background:white;
 padding:25px;
 border-radius:10px;
@@ -154,7 +229,7 @@ Providing practical and theoretical knowledge in Biology, Chemistry, and Physics
 
 </div>
 
-<div style="
+<div class="dept-card" style="
 background:white;
 padding:25px;
 border-radius:10px;
@@ -170,7 +245,7 @@ Enhancing communication skills through English, Kiswahili, and Literature.
 
 </div>
 
-<div style="
+<div class="dept-card" style="
 background:white;
 padding:25px;
 border-radius:10px;
@@ -201,7 +276,7 @@ padding:60px;
 
 <h2>Empowering Learners for a Successful Future</h2>
 
-<p style="
+<p class="cta-text" style="
 font-size:18px;
 width:70%;
 margin:auto;

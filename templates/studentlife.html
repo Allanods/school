@@ -134,9 +134,65 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
+
+    /* Back button */
+    .back-btn {
+      display: inline-block;
+      margin: 20px;
+      padding: 10px 22px;
+      background: #0d6efd;
+      color: #fff;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .back-btn:hover {
+      background: #0a58ca;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+    }
+    .back-btn:focus-visible {
+      outline: 3px solid rgba(13, 110, 253, 0.5);
+      outline-offset: 2px;
+    }
+    @media (max-width: 600px) {
+      .back-btn {
+        margin: 12px;
+        padding: 8px 18px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: 40px 16px !important;
+      }
+      .main-title {
+        font-size: 2rem !important;
+      }
+      .header-section {
+        margin-bottom: 40px !important;
+      }
+      .feature-card {
+        padding: 24px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
+
+<a href="/" class="back-btn" onclick="if (window.history.length > 1) { window.history.back(); return false; }">
+  &#8592; Back
+</a>
 
 <div class="student-life-container">
   

@@ -6,24 +6,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Kigumo Bendera High School</title>
+    <style>
+        .back-btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 22px;
+            background: #0d6efd;
+            color: #fff;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: inherit;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: #0a58ca;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+        }
+        .back-btn:focus-visible {
+            outline: 3px solid rgba(13, 110, 253, 0.5);
+            outline-offset: 2px;
+        }
+        @media (max-width: 600px) {
+            .back-btn {
+                margin: 12px;
+                padding: 8px 18px;
+                font-size: 0.9rem;
+            }
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-wrap {
+                margin-top: 30px;
+            }
+            .about-title {
+                font-size: 30px !important;
+            }
+            .about-subtitle {
+                font-size: 16px !important;
+                margin-bottom: 30px !important;
+            }
+            .about-flex {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 30px !important;
+            }
+            .about-col {
+                width: 100% !important;
+            }
+            .about-text p {
+                font-size: 16px !important;
+                text-align: left !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div style="width:90%; margin:auto; margin-top:60px;">
+<a href="/" class="back-btn" onclick="if (window.history.length > 1) { window.history.back(); return false; }">
+&#8592; Back
+</a>
 
-    <h1 style="text-align:center; color:#0d6efd; font-size:45px;">
+<div class="about-wrap" style="width:90%; margin:auto; margin-top:60px;">
+
+    <h1 class="about-title" style="text-align:center; color:#0d6efd; font-size:45px;">
         About Kigumo Bendera High School
     </h1>
 
-    <p style="text-align:center; color:gray; font-size:18px; margin-bottom:60px;">
+    <p class="about-subtitle" style="text-align:center; color:gray; font-size:18px; margin-bottom:60px;">
         A Legacy of Excellence Since 1965
     </p>
 
-    <div style="display:flex; align-items:center; gap:60px;">
+    <div class="about-flex" style="display:flex; align-items:center; gap:60px;">
 
         <!-- Left Side -->
-        <div style="width:50%;">
+        <div class="about-col about-text" style="width:50%;">
 
             <h2 style="color:#0d6efd;">
                 Empowering Generations Through Quality Education
@@ -53,7 +113,7 @@
         </div>
 
         <!-- Right Side -->
-        <div style="width:50%; text-align:center;">
+        <div class="about-col" style="width:50%; text-align:center;">
 
             <img src="{% static 'images/kb2.webp' %}"
                  alt="Kigumo Bendera High School"
