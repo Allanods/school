@@ -30,7 +30,7 @@ import os
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-      'school-3-nv64.onrender.com',
+    'school-4-z5zb.onrender.com',
 ]
 
 
