@@ -19,19 +19,26 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
+import os
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-u9l0l9vy@z!=f77vd)_1!p5ex!d_7wpo$#jv8#-0cd^i@f@^hv'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-u9l0l9vy@z!=f77vd)_1!p5ex!d_7wpo$#jv8#-0cd^i@f@^hv')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-import os
 
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'school-4-z5zb.onrender.com',
 ]
+
+# Render sets RENDER_EXTERNAL_HOSTNAME to the service's public hostname.
+RENDER_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_HOSTNAME)
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    CSRF_TRUSTED_ORIGINS = [f'https://{RENDER_HOSTNAME}']
 
 
 # Application definition
@@ -120,9 +127,16 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS= [
-    BASE_DIR, 'static']
+    BASE_DIR / 'static']
 
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+    },
+}

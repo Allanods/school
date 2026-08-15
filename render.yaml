@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: school
+    runtime: python
+    plan: free
+    repo: https://github.com/Allanods/school
+    branch: master
+    buildCommand: bash build.sh
+    startCommand: gunicorn config.wsgi:application
+    autoDeploy: true
