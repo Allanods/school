@@ -1,295 +1,105 @@
+{% extends "base.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academics | Kigumo Bendera High School</title>
-    <style>
-        .back-btn {
-            display: inline-block;
-            margin: 20px;
-            padding: 10px 22px;
-            background: #0d6efd;
-            color: #fff;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            font-family: inherit;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .back-btn:hover {
-            background: #0a58ca;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
-        }
-        .back-btn:focus-visible {
-            outline: 3px solid rgba(13, 110, 253, 0.5);
-            outline-offset: 2px;
-        }
-        @media (max-width: 600px) {
-            .back-btn {
-                margin: 12px;
-                padding: 8px 18px;
-                font-size: 0.9rem;
-            }
-        }
-        /* Responsive */
-        @media (max-width: 768px) {
-            .acad-head {
-                padding: 35px 16px !important;
-            }
-            .acad-title {
-                font-size: 30px !important;
-            }
-            .acad-sub {
-                font-size: 17px !important;
-            }
-            .acad-intro {
-                flex-direction: column !important;
-                align-items: center !important;
-                gap: 35px !important;
-                margin-bottom: 50px !important;
-            }
-            .acad-col {
-                width: 100% !important;
-            }
-            .acad-intro-text p {
-                font-size: 16px !important;
-                text-align: left !important;
-            }
-            .acad-img {
-                height: auto !important;
-            }
-            .dept-flex {
-                flex-wrap: wrap;
-                justify-content: center !important;
-                gap: 20px !important;
-            }
-            .dept-card {
-                width: 100% !important;
-            }
-            .cta-text {
-                width: 100% !important;
-            }
-        }
-    </style>
-</head>
+{% block title %}Academics | Kigumo Bendera High School{% endblock %}
 
-<body style="font-family:Arial, Helvetica, sans-serif; background:#f8f9fa; margin:0;">
+{% block content %}
 
-<!-- Back -->
-<a href="/" class="back-btn" onclick="if (window.history.length > 1) { window.history.back(); return false; }">
-&#8592; Back
-</a>
-
-<!-- Heading -->
-
-<div class="acad-head" style="text-align:center; padding:50px;">
-
-    <h1 class="acad-title" style="color:#0d6efd; font-size:45px;">
-        Academic Excellence
-    </h1>
-
-    <p class="acad-sub" style="font-size:20px; color:gray;">
-        Providing quality education since 1965.
-    </p>
-
-</div>
-
-<!-- Introduction -->
-
-<div class="acad-intro" style="
-display:flex;
-align-items:center;
-justify-content:space-between;
-width:90%;
-margin:auto;
-gap:70px;
-margin-bottom:80px;
-">
-
-    <!-- Text -->
-
-    <div class="acad-col acad-intro-text" style="width:50%;">
-
-        <h2 style="color:#0d6efd;">
-            A Tradition of Academic Excellence
-        </h2>
-
-        <p style="
-        font-size:18px;
-        line-height:1.8;
-        color:#555;
-        text-align:justify;
-        ">
-
-            Kigumo Bendera High School is committed to providing
-            high-quality education that prepares students for
-            success in higher education and beyond. Our dedicated
-            teachers create an engaging learning environment that
-            promotes critical thinking, creativity, discipline,
-            and academic excellence.
-
-        </p>
-
-        <p style="
-        font-size:18px;
-        line-height:1.8;
-        color:#555;
-        text-align:justify;
-        ">
-
-            Through a balanced curriculum, continuous assessment,
-            and learner-centered teaching, we equip our students
-            with the knowledge, confidence, and skills required
-            to thrive in today's competitive world.
-
-        </p>
-
+<section class="page-banner">
+    <div class="container">
+        <h1>Academic Excellence</h1>
+        <p>Providing quality education since 1965.</p>
     </div>
+</section>
 
-    <!-- Image -->
-
-    <div class="acad-col" style="
-    width:50%;
-    text-align:center;
-    ">
-
-        <img class="acad-img" src="{% static 'images/kb3.webp' %}"
-
-        alt="Academics"
-
-        style="
-        width:100%;
-        max-width:500px;
-        height:420px;
-        object-fit:cover;
-        border-radius:20px;
-        box-shadow:0 15px 35px rgba(0,0,0,.25);
-        ">
-
+<section class="section section-white">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="eyebrow">Academics</span>
+                <h2 class="section-title mb-4">A Tradition of Academic Excellence</h2>
+                <p class="mb-4">
+                    Kigumo Bendera High School is committed to providing high-quality education
+                    that prepares students for success in higher education and beyond. Our dedicated
+                    teachers create an engaging learning environment that promotes critical thinking,
+                    creativity, discipline, and academic excellence.
+                </p>
+                <p class="mb-4">
+                    Through a balanced curriculum, continuous assessment, and learner-centered teaching,
+                    we equip our students with the knowledge, confidence, and skills required to thrive
+                    in today's competitive world.
+                </p>
+                <ul class="check-list mb-4">
+                    <li>Balanced curriculum with continuous assessment</li>
+                    <li>Learner-centered and engaging teaching methods</li>
+                    <li>Preparation for higher education and careers</li>
+                </ul>
+                <a href="/admission/" class="btn btn-primary">Enroll Today</a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="{% static 'images/kb3.webp' %}"
+                     alt="Academics at Kigumo Bendera High School"
+                     class="split-img"
+                     style="max-height: 420px;">
+            </div>
+        </div>
     </div>
+</section>
 
-</div>
+<section class="section section-soft">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">Departments</span>
+            <h2 class="section-title">Academic Departments</h2>
+            <p class="section-desc">Four departments dedicated to developing well-rounded, knowledge-ready learners.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-icon">&#9633;</div>
+                        <h3 class="card-title">Mathematics</h3>
+                        <p class="card-text">Developing analytical and problem-solving skills through quality instruction.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-icon icon-amber">&#9670;</div>
+                        <h3 class="card-title">Sciences</h3>
+                        <p class="card-text">Providing practical and theoretical knowledge in Biology, Chemistry, and Physics.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-icon icon-sky">&#9679;</div>
+                        <h3 class="card-title">Languages</h3>
+                        <p class="card-text">Enhancing communication skills through English, Kiswahili, and Literature.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-icon">&#9650;</div>
+                        <h3 class="card-title">Humanities</h3>
+                        <p class="card-text">Building knowledge in History, Geography, CRE, and Business Studies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<!-- Academic Departments -->
+<section class="cta-band">
+    <div class="container">
+        <h2>Empowering Learners for a Successful Future</h2>
+        <p>Our academic programmes are designed to inspire excellence, innovation, and lifelong learning while preparing students to be responsible citizens and future leaders.</p>
+        <a href="/contact/" class="btn btn-amber btn-lg">Talk to Us</a>
+    </div>
+</section>
 
-<div style="
-width:90%;
-margin:auto;
-margin-bottom:80px;
-">
-
-<h2 style="
-text-align:center;
-color:#0d6efd;
-margin-bottom:40px;
-">
-Academic Departments
-</h2>
-
-<div class="dept-flex" style="
-display:flex;
-justify-content:space-between;
-gap:25px;
-">
-
-<div class="dept-card" style="
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-width:23%;
-">
-
-<h3>Mathematics</h3>
-
-<p>
-Developing analytical and problem-solving skills through quality instruction.
-</p>
-
-</div>
-
-<div class="dept-card" style="
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-width:23%;
-">
-
-<h3>Sciences</h3>
-
-<p>
-Providing practical and theoretical knowledge in Biology, Chemistry, and Physics.
-</p>
-
-</div>
-
-<div class="dept-card" style="
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-width:23%;
-">
-
-<h3>Languages</h3>
-
-<p>
-Enhancing communication skills through English, Kiswahili, and Literature.
-</p>
-
-</div>
-
-<div class="dept-card" style="
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-width:23%;
-">
-
-<h3>Humanities</h3>
-
-<p>
-Building knowledge in History, Geography, CRE, and Business Studies.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Call to Action -->
-
-<div style="
-background:#0d6efd;
-color:white;
-text-align:center;
-padding:60px;
-">
-
-<h2>Empowering Learners for a Successful Future</h2>
-
-<p class="cta-text" style="
-font-size:18px;
-width:70%;
-margin:auto;
-line-height:1.8;
-">
-
-Our academic programmes are designed to inspire excellence,
-innovation, and lifelong learning while preparing students to
-be responsible citizens and future leaders.
-
-</p>
-
-</div>
-
-</body>
-</html>
+{% endblock %}

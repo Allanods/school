@@ -1,255 +1,157 @@
+{% extends "base.html" %}
+{% load static %}
 
+{% block title %}Admissions | Kigumo Bendera High School{% endblock %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admissions | Kigumo Bendera High School</title>
-    {% load static %}
+{% block content %}
 
-
-   <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
-    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
-
-    <style>
-        .back-btn {
-            display: inline-block;
-            margin: 20px;
-            padding: 10px 22px;
-            background: #0d6efd;
-            color: #fff;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            font-family: inherit;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .back-btn:hover {
-            background: #0a58ca;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
-        }
-        .back-btn:focus-visible {
-            outline: 3px solid rgba(13, 110, 253, 0.5);
-            outline-offset: 2px;
-        }
-        @media (max-width: 600px) {
-            .back-btn {
-                margin: 12px;
-                padding: 8px 18px;
-                font-size: 0.9rem;
-            }
-        }
-        /* Responsive */
-        @media (max-width: 768px) {
-            .adm-hero {
-                padding: 40px 16px !important;
-            }
-            .adm-hero h1 {
-                font-size: 32px !important;
-            }
-            .adm-hero p {
-                font-size: 17px !important;
-            }
-            .adm-intro {
-                flex-direction: column !important;
-                align-items: center !important;
-                gap: 30px !important;
-                margin: 40px auto !important;
-            }
-            .adm-col {
-                width: 100% !important;
-            }
-            .adm-intro-text p {
-                font-size: 16px !important;
-                text-align: left !important;
-            }
-            .adm-img {
-                height: auto !important;
-            }
-            .adm-req-flex {
-                flex-wrap: wrap;
-                justify-content: center !important;
-                gap: 16px !important;
-            }
-            .adm-req-card {
-                width: 100% !important;
-            }
-            .adm-why-flex {
-                flex-wrap: wrap;
-                gap: 30px !important;
-            }
-            .adm-why-card {
-                width: 100% !important;
-            }
-            .adm-why-wrap {
-                padding: 40px 16px !important;
-            }
-            .adm-cta {
-                padding: 40px 16px !important;
-            }
-        }
-    </style>
-
-
-
-</head>
-
-<body style="font-family:Arial, Helvetica, sans-serif; margin:0; background:#f8f9fa;">
-
-<!-- Back -->
-<a href="/" class="back-btn" onclick="if (window.history.length > 1) { window.history.back(); return false; }">
-&#8592; Back
-</a>
-
-<!-- Hero Section -->
-
-<div class="adm-hero" style="background:#0d6efd; color:white; text-align:center; padding:70px;">
-
-    <h1 style="font-size:50px;">Admissions</h1>
-
-    <p style="font-size:20px;">
-        Begin your journey towards excellence at Kigumo Bendera High School.
-    </p>
-
-</div>
-
-<!-- Introduction -->
-
-<div class="adm-intro" style="width:90%; margin:60px auto; display:flex; gap:60px; align-items:center;">
-
-    <div class="adm-col adm-intro-text" style="width:50%;">
-
-        <h2 style="color:#0d6efd;">Welcome to Our Admissions Office</h2>
-
-        <p style="font-size:18px; line-height:1.8; text-align:justify; color:#555;">
-
-            We warmly welcome students who are ready to join a community dedicated
-            to academic excellence, discipline, leadership and holistic development.
-            Our admission process is simple, transparent and designed to help every
-            learner settle comfortably into school life.
-
-        </p>
-
-        <a href="" style="
-        background:#0d6efd;
-        color:white;
-        padding:12px 30px;
-        text-decoration:none;
-        border-radius:5px;
-        display:inline-block;
-        margin-top:20px;">
-        Contact Us
-        </a>
-
+<section class="page-banner">
+    <div class="container">
+        <h1>Admissions</h1>
+        <p>Begin your journey towards excellence at Kigumo Bendera High School.</p>
     </div>
+</section>
 
-    <div class="adm-col" style="width:50%; text-align:center;">
-
-        <img class="adm-img" src="{% static 'images/kb4.webp' %}"
-
-        style="
-        width:100%;
-        max-width:500px;
-        height:400px;
-        object-fit:cover;
-        border-radius:15px;
-        box-shadow:0 10px 30px rgba(0,0,0,.2);">
-
+<section class="section section-white">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="eyebrow">Admissions Office</span>
+                <h2 class="section-title mb-4">Welcome to Our Admissions Office</h2>
+                <p class="mb-4">
+                    We warmly welcome students who are ready to join a community dedicated to academic
+                    excellence, discipline, leadership and holistic development. Our admission process
+                    is simple, transparent and designed to help every learner settle comfortably into
+                    school life.
+                </p>
+                <ul class="check-list mb-4">
+                    <li>A simple, transparent application process</li>
+                    <li>Guidance for students and parents at every step</li>
+                    <li>A warm welcome into a supportive community</li>
+                </ul>
+                <a href="/contact/" class="btn btn-primary">Contact Us</a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="{% static 'images/kb2.webp' %}"
+                     alt="Kigumo Bendera High School"
+                     class="split-img"
+                     style="max-height: 400px;">
+            </div>
+        </div>
     </div>
+</section>
 
-</div>
+<section class="section section-soft">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">Requirements</span>
+            <h2 class="section-title">Admission Requirements</h2>
+            <p class="section-desc">What you need to complete your application to Kigumo Bendera High School.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="step-num">1</div>
+                        <h4 class="card-title">Application Form</h4>
+                        <p class="card-text">Complete the school admission application form.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="step-num">2</div>
+                        <h4 class="card-title">Academic Records</h4>
+                        <p class="card-text">Provide previous school reports and examination results.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="step-num">3</div>
+                        <h4 class="card-title">Birth Certificate</h4>
+                        <p class="card-text">Submit a copy of the learner's birth certificate.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="step-num">4</div>
+                        <h4 class="card-title">Passport Photos</h4>
+                        <p class="card-text">Provide recent passport-size photographs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<!-- Admission Requirements -->
+<section class="section section-white">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">Why Choose Us</span>
+            <h2 class="section-title">Why Join Kigumo Bendera High School?</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card highlight-card">
+                    <div class="card-body text-center">
+                        <div class="card-icon mx-auto">&#9733;</div>
+                        <h3 class="card-title">Academic Excellence</h3>
+                        <p class="card-text">Consistent commitment to quality education and learner success.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="card-icon icon-amber mx-auto">&#9878;</div>
+                        <h3 class="card-title">Qualified Teachers</h3>
+                        <p class="card-text">Experienced educators dedicated to inspiring every learner.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="card-icon icon-sky mx-auto">&#9679;</div>
+                        <h3 class="card-title">Holistic Development</h3>
+                        <p class="card-text">Sports, clubs, leadership and talent development programmes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<div style="width:90%; margin:auto;">
+<section class="section section-soft">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body p-5">
+                        <h2 class="section-title mb-3">School Fees</h2>
+                        <p class="mb-4">
+                            For the latest fee structure and payment guidelines, kindly contact the
+                            school administration.
+                        </p>
+                        <a href="/contact/" class="btn btn-primary">Enquire About Fees</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<h2 style="text-align:center; color:#0d6efd;">Admission Requirements</h2>
+<section class="cta-band">
+    <div class="container">
+        <h2>Ready to Join Kigumo Bendera High School?</h2>
+        <p>Take the first step towards a brighter future by contacting our admissions office today.</p>
+        <a href="/contact/" class="btn btn-amber btn-lg">Contact Admissions</a>
+    </div>
+</section>
 
-<div class="adm-req-flex" style="display:flex; gap:20px; justify-content:space-between; margin-top:40px;">
-
-<div class="adm-req-card" style="background:white; width:23%; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,.1);">
-<h4>Application Form</h4>
-<p>Complete the school admission application form.</p>
-</div>
-
-<div class="adm-req-card" style="background:white; width:23%; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,.1);">
-<h4>Academic Records</h4>
-<p>Provide previous school reports and examination results.</p>
-</div>
-
-<div class="adm-req-card" style="background:white; width:23%; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,.1);">
-<h4>Birth Certificate</h4>
-<p>Submit a copy of the learner's birth certificate.</p>
-</div>
-
-<div class="adm-req-card" style="background:white; width:23%; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,.1);">
-<h4>Passport Photos</h4>
-<p>Recent passport-size photographs.</p>
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- Why Join Us -->
-
-<div class="adm-why-wrap" style="background:white; padding:60px;">
-
-<h2 style="text-align:center; color:#0d6efd;">Why Join Kigumo Bendera High School?</h2>
-
-<div class="adm-why-flex" style="display:flex; gap:20px; justify-content:space-between; margin-top:40px;">
-
-<div class="adm-why-card" style="width:30%; text-align:center;">
-<h3>Academic Excellence</h3>
-<p>Consistent commitment to quality education and learner success.</p>
-</div>
-
-<div class="adm-why-card" style="width:30%; text-align:center;">
-<h3>Qualified Teachers</h3>
-<p>Experienced educators dedicated to inspiring every learner.</p>
-</div>
-
-<div class="adm-why-card" style="width:30%; text-align:center;">
-<h3>Holistic Development</h3>
-<p>Sports, clubs, leadership and talent development programmes.</p>
-</div>
-
-</div>
-
-</div>
-
-<!-- Fees -->
-
-<div style="width:90%; margin:70px auto;">
-
-<h2 style="color:#0d6efd;">School Fees</h2>
-
-<p style="font-size:18px; color:#555; line-height:1.8;">
-
-For the latest fee structure and payment guidelines,
-kindly contact the school administration.
-
-</p>
-
-</div>
-
-<!-- CTA -->
-
-<div class="adm-cta" style="background:#0d6efd; color:white; text-align:center; padding:60px;">
-
-<h2>Ready to Join Kigumo Bendera High School?</h2>
-
-<p style="font-size:18px;">
-Take the first step towards a brighter future by contacting our admissions office today.
-</p>
-
-
-</div>
-
-</body>
-</html>
+{% endblock %}

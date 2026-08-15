@@ -1,134 +1,114 @@
+{% extends "base.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Kigumo Bendera High School</title>
-    <style>
-        .back-btn {
-            display: inline-block;
-            margin: 20px;
-            padding: 10px 22px;
-            background: #0d6efd;
-            color: #fff;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            font-family: inherit;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .back-btn:hover {
-            background: #0a58ca;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
-        }
-        .back-btn:focus-visible {
-            outline: 3px solid rgba(13, 110, 253, 0.5);
-            outline-offset: 2px;
-        }
-        @media (max-width: 600px) {
-            .back-btn {
-                margin: 12px;
-                padding: 8px 18px;
-                font-size: 0.9rem;
-            }
-        }
-        /* Responsive */
-        @media (max-width: 768px) {
-            .about-wrap {
-                margin-top: 30px;
-            }
-            .about-title {
-                font-size: 30px !important;
-            }
-            .about-subtitle {
-                font-size: 16px !important;
-                margin-bottom: 30px !important;
-            }
-            .about-flex {
-                flex-direction: column !important;
-                align-items: center !important;
-                gap: 30px !important;
-            }
-            .about-col {
-                width: 100% !important;
-            }
-            .about-text p {
-                font-size: 16px !important;
-                text-align: left !important;
-            }
-        }
-    </style>
-</head>
+{% block title %}About Us | Kigumo Bendera High School{% endblock %}
 
-<body>
+{% block content %}
 
-<a href="/" class="back-btn" onclick="if (window.history.length > 1) { window.history.back(); return false; }">
-&#8592; Back
-</a>
-
-<div class="about-wrap" style="width:90%; margin:auto; margin-top:60px;">
-
-    <h1 class="about-title" style="text-align:center; color:#0d6efd; font-size:45px;">
-        About Kigumo Bendera High School
-    </h1>
-
-    <p class="about-subtitle" style="text-align:center; color:gray; font-size:18px; margin-bottom:60px;">
-        A Legacy of Excellence Since 1965
-    </p>
-
-    <div class="about-flex" style="display:flex; align-items:center; gap:60px;">
-
-        <!-- Left Side -->
-        <div class="about-col about-text" style="width:50%;">
-
-            <h2 style="color:#0d6efd;">
-                Empowering Generations Through Quality Education
-            </h2>
-
-            <p style="font-size:18px; line-height:1.8; color:#555; text-align:justify;">
-
-                Established in <strong>1965</strong>, Kigumo Bendera High School has
-                proudly served generations of learners by providing quality education
-                founded on academic excellence, discipline, integrity, and leadership.
-                The school remains committed to creating an environment where every
-                student is inspired to achieve their full potential.
-
-            </p>
-
-            <p style="font-size:18px; line-height:1.8; color:#555; text-align:justify;">
-
-                Through dedicated teachers, a supportive learning environment, and
-                diverse co-curricular programmes, the school continues to nurture
-                responsible citizens equipped with the knowledge, skills, and values
-                needed to thrive in higher education and contribute positively to society.
-
-            </p>
-
-           
-
-        </div>
-
-        <!-- Right Side -->
-        <div class="about-col" style="width:50%; text-align:center;">
-
-            <img src="{% static 'images/kb2.webp' %}"
-                 alt="Kigumo Bendera High School"
-
-                 style="
-                 width:100%;
-                 max-width:550px;
-                 border-radius:15px;
-                 box-shadow:0 12px 30px rgba(0,0,0,0.25);">
-
-        </div>
-
+<section class="page-banner">
+    <div class="container">
+        <h1>About Kigumo Bendera High School</h1>
+        <p>A legacy of excellence, discipline, and leadership since 1965.</p>
     </div>
+</section>
 
-</div>
+<section class="section section-white">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="eyebrow">Our Story</span>
+                <h2 class="section-title mb-4">Empowering Generations Through Quality Education</h2>
+                <p class="mb-4">
+                    Established in <strong>1965</strong>, Kigumo Bendera High School has proudly
+                    served generations of learners by providing quality education founded on
+                    academic excellence, discipline, integrity, and leadership. The school remains
+                    committed to creating an environment where every student is inspired to achieve
+                    their full potential.
+                </p>
+                <p class="mb-4">
+                    Through dedicated teachers, a supportive learning environment, and diverse
+                    co-curricular programmes, the school continues to nurture responsible citizens
+                    equipped with the knowledge, skills, and values needed to thrive in higher
+                    education and contribute positively to society.
+                </p>
+                <ul class="check-list mb-4">
+                    <li>More than six decades of academic excellence</li>
+                    <li>A culture of discipline, integrity and leadership</li>
+                    <li>Dedicated and experienced teaching staff</li>
+                </ul>
+                <a href="/admission/" class="btn btn-primary">Join Our Community</a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="{% static 'images/kb2.webp' %}"
+                     alt="Kigumo Bendera High School"
+                     class="split-img">
+            </div>
+        </div>
+    </div>
+</section>
 
-</body>
-</html>
+<section class="section section-soft">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">Our Values</span>
+            <h2 class="section-title">What We Stand For</h2>
+            <p class="section-desc">The values that guide everything we do at Kigumo Bendera High School.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="card-icon mx-auto">&#9633;</div>
+                        <h3 class="card-title">Academic Excellence</h3>
+                        <p class="card-text">A consistent commitment to quality education and the success of every learner.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="card-icon icon-amber mx-auto">&#9650;</div>
+                        <h3 class="card-title">Integrity &amp; Discipline</h3>
+                        <p class="card-text">Building responsible citizens grounded in honesty, respect, and self-discipline.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="card-icon icon-sky mx-auto">&#9679;</div>
+                        <h3 class="card-title">Leadership &amp; Service</h3>
+                        <p class="card-text">Preparing young people to lead with confidence and serve their communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-white">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-4">
+                <div class="hero-stat" style="color: var(--navy);">
+                    <span class="stat-num" style="color: var(--blue);">1965</span>
+                    <span class="stat-label">Founded</span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="hero-stat" style="color: var(--navy);">
+                    <span class="stat-num" style="color: var(--blue);">60+</span>
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="hero-stat" style="color: var(--navy);">
+                    <span class="stat-num" style="color: var(--blue);">4</span>
+                    <span class="stat-label">Academic Departments</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

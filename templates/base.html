@@ -1,0 +1,88 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Kigumo Bendera High School{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bg-soft">
+
+    <div class="topbar d-none d-md-block">
+        <div class="container d-flex justify-content-between">
+            <span>&#9742; +254 712 345 678 &nbsp;|&nbsp; &#9993; info@kigumobendera.ac.ke</span>
+            <span>Excellence Since 1965</span>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                Kigumo Bendera <span class="brand-accent">High School</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="/about/">About</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/academics/' %}active{% endif %}" href="/academics/">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/admission/' %}active{% endif %}" href="/admission/">Admission</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/facilities/' %}active{% endif %}" href="/facilities/">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/studentlife/' %}active{% endif %}" href="/studentlife/">Student Life</a></li>
+                    <li class="nav-item"><a class="btn btn-nav-contact {% if request.path == '/contact/' %}active-contact{% endif %}" href="/contact/">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand mb-2">Kigumo Bendera <span class="brand-accent">High School</span></div>
+                    <p class="mb-3">Nurturing academic excellence, integrity, and future leaders through quality education since 1965.</p>
+                    <span>&#9742; +254 712 345 678</span><br>
+                    <span>&#9993; info@kigumobendera.ac.ke</span>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/academics/">Academics</a></li>
+                        <li><a href="/admission/">Admissions</a></li>
+                        <li><a href="/facilities/">Facilities</a></li>
+                        <li><a href="/studentlife/">Student Life</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/contact/">Contact Us</a></li>
+                        <li><a href="/show/">Message Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Visit Us</h5>
+                    <p class="mb-3">Kigumo Bendera High School,<br>Kigumo, Murang'a County, Kenya.</p>
+                    <a href="/contact/" class="btn btn-amber">Get in Touch</a>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                &copy; {% now "Y" %} Kigumo Bendera High School. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
